@@ -1,0 +1,15 @@
+semi: true
+trailingComma: all
+singleQuote: true
+printWidth: 120
+tabWidth: 2
+importOrder:
+  - '^react(.*)$'
+  - '^[^@.+](.*)'
+  - '^@(.*)'
+  - '(.*)(/models/)(.*)'
+  - '(.*)(/store/)(.*)'
+  - '(.*)(/utils/)(.*)'
+  - '^[.+/]'
+  - '(.*)(sass|scss)$'
+importOrderSeparation: true
