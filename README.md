@@ -6,8 +6,8 @@ Welcome! This repository is designed to test your skills as a frontend developer
 
 The repository contains two main folders:
 
-1. **Backend**
-2. **Frontend**
+1. **backend**
+2. **frontend**
 
 ### Backend
 
@@ -15,7 +15,7 @@ The `Backend` folder contains a simple JSON server which will serve as an exampl
 
 1. **Navigate to the Backend Folder**:
     ```bash
-    cd Backend
+    cd backend
     ```
 
 2. **Install Dependencies**:
