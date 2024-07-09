@@ -1,8 +1,8 @@
 {
-  "name": "evelstar-fleet",
+  "name": "evelstar-recruitment-frontend",
   "version": "1.0.0",
   "main": "index.js",
-  "description": "Evelstar Fleet",
+  "description": "Evelstar Recruitment Frontend",
   "jest": {
     "testEnvironment": "jsdom",
     "setupFiles": [
@@ -64,6 +64,7 @@
   "scripts": {
     "test": "vitest --passWithNoTests",
     "start": "vite serve --port 8081",
+    "start-server": "cd ../backend && yarn && yarn dev",
     "build": "vite build",
     "prettier:fix": "./node_modules/.bin/prettier './src/**/*.(ts|tsx|scss)' --write",
     "postinstall": "cd ../ && husky install ./frontend/.husky && cd frontend"
