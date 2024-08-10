@@ -1,0 +1,1 @@
+export const backendHostname = "http://localhost:3000"

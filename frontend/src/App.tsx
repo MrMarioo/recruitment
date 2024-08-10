@@ -1,16 +1,37 @@
 import { FC } from 'react';
+import { Provider } from 'react-redux';
 
-import { Box, Paper, Typography } from '@mui/material';
+import { Box } from '@mui/material';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
+import { store } from './redux/store/newPost.store';
+
+import TwitterLikeFeed from './pages/mainPage/MainPage';
 import './styles/main.scss';
+import { BrowserRouter, Route, Routes, useRoutes } from 'react-router-dom';
+import { routes } from './app-routing.module';
 
 const App: FC = () => {
+  const queryClient = new QueryClient();
+
   return (
-    <Box className="center">
-      <Paper sx={{ padding: 4 }}>
-        <Typography variant="h6">Hello, please start here. 🙂</Typography>
-      </Paper>
-    </Box>
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
+        <Box className="center">
+          <BrowserRouter>
+            <Routes>
+              {routes.map((route) => (
+              <Route
+                key={route.path}
+                path={route.path}
+                element={route.element}
+              />
+            ))}
+            </Routes>
+          </BrowserRouter>
+        </Box>
+      </Provider>
+    </QueryClientProvider>
   );
 };
 
